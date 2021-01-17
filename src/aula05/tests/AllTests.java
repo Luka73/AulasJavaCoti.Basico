@@ -5,6 +5,6 @@ import org.junit.platform.suite.api.SelectPackages;
 import org.junit.runner.RunWith;
 
 @RunWith(JUnitPlatform.class)
-@SelectPackages("repositories.tests")
+@SelectPackages("aula05.repositories.tests")
 public class AllTests {
 }
