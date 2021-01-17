@@ -14,7 +14,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ClienteRepositoryTest {
 
-    // atributo
     private IClienteRepository clienteRepository;
 
     @BeforeEach
@@ -22,7 +21,6 @@ public class ClienteRepositoryTest {
         //inicializando o clienteRepository
         clienteRepository = new ClienteRepository(ConnectionFactory.getConnection());
     }
-
 
     @Test
     void testCreate() throws Exception{
