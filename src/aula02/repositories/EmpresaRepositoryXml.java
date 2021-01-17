@@ -38,7 +38,7 @@ public class EmpresaRepositoryXml implements IEmpresaRepository {
         Transformer transformer = transformerFactory.newTransformer();
         DOMSource domSource = new DOMSource(document);
 
-        StreamResult streamResult = new StreamResult(new File("C:\\Users\\luana\\IdeaProjects\\AulasJavaCoti\\src\\aula02\\files\\empresa.xml"));
+        StreamResult streamResult = new StreamResult(new File("C:\\Projects\\AulasJavaCoti.Basico\\src\\aula02\\files\\empresa.xml"));
         transformer.transform(domSource, streamResult);
     }
 }

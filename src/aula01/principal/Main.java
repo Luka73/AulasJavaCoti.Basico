@@ -1,7 +1,6 @@
 package aula01.principal;
 
 import aula01.entities.Cliente;
-import aula01.entities.Endereco;
 import aula01.utils.ScannerUtil;
 
 import java.util.Scanner;

@@ -18,7 +18,7 @@ public class EmpresaRepositoryJson implements IEmpresaRepository {
 
         JSONObject json = new JSONObject(item);
 
-        FileWriter file = new FileWriter("C:\\Users\\luana\\IdeaProjects\\AulasJavaCoti\\src\\aula02\\files\\empresa.json");
+        FileWriter file = new FileWriter("C:\\Projects\\AulasJavaCoti.Basico\\src\\aula02\\files\\empresa.json");
         file.write(json.toJSONString());
         file.flush();
         file.close();
