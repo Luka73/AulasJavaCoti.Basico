@@ -1,15 +1,27 @@
 package aula02.principal;
 
 import aula02.entities.Empresa;
+import aula02.entities.Funcionario;
+import aula02.enums.TipoContratacao;
 import aula02.interfaces.IEmpresaRepository;
 import aula02.repositories.EmpresaRepositoryJson;
 import aula02.repositories.EmpresaRepositoryXml;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Empresa empresa = new Empresa(1, "COTI Informática", "64.737.104/0001-66");
+        Funcionario funcionario1 = new Funcionario(1, "Pedro", "13131313", TipoContratacao.Estagio);
+        Funcionario funcionario2 = new Funcionario(2, "Maria", "13131313", TipoContratacao.Estagio);
+        List<Funcionario> funcionarioList = new ArrayList<>();
+        funcionarioList.add(funcionario1);
+        funcionarioList.add(funcionario2);
+        empresa.setFuncionarios(funcionarioList);
+
+
         try {
             System.out.println("Informe (1) XML ou (2) JSON....: ");
             int opcao = Integer.parseInt(new Scanner(System.in).next());

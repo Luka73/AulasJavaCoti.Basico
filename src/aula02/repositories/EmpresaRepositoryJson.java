@@ -1,6 +1,7 @@
 package aula02.repositories;
 
 import aula02.entities.Empresa;
+import aula02.entities.Funcionario;
 import aula02.interfaces.IEmpresaRepository;
 import org.json.simple.JSONObject;
 
@@ -15,6 +16,17 @@ public class EmpresaRepositoryJson implements IEmpresaRepository {
         item.put("idEmpresa", empresa.getIdEmpresa());
         item.put("razaoSocial", empresa.getRazaoSocial());
         item.put("cnpj", empresa.getCnpj());
+
+
+        HashMap<String, Object> funcionarios = new HashMap<>();
+        for(Funcionario f : empresa.getFuncionarios()) {
+            funcionarios.put("idFuncionario", f.getIdFuncionario());
+            funcionarios.put("nome", f.getNome());
+            funcionarios.put("matricula", f.getMatricula());
+            funcionarios.put("tipoContratacao", f.getTipoContratacao().toString());
+        }
+
+        item.put("funcionarios", funcionarios);
 
         JSONObject json = new JSONObject(item);
 
